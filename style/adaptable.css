@@ -217,19 +217,19 @@ div.signuppanel h2 {
 }
 
 #logo {
-    float: left;
+    float: right;
     margin-bottom: 1px;
     margin-left: 0px;
     margin-top: 1px;
-    max-width: 350px;
+    max-width: 115px;
     min-height:82px;
 }
 
 #logocontainer {
     float: left;
-    height: 160px;
-    width: 220px;
-    margin: 0 15px 0 0 ;
+    height: 100px;
+    width: 200px;
+    margin: 0 0 0 0 ;
 }
 
 #titlecontainer,
