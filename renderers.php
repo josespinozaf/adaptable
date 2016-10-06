@@ -1110,7 +1110,6 @@ EOT;
             	$branchurl   = new moodle_url('/local/wellness/fitnessgram.php');
             	$branchsort  = 9997;
             	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
-            pico conchatumare
             }
             
             if (!empty($PAGE->theme->settings->enableevents)) {
