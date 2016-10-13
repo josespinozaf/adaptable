@@ -159,7 +159,7 @@ $string['tickertext2desc'] = 'By controlling access on profile fields you can sh
 $string['tickertextprofilefield'] = 'Custom Profile Field Name=Value (optional)';
 $string['tickertextprofilefielddesc'] = 'Add access rule using for custom profile field eg: usertype=student';
 
-$string['ticker'] = 'Announcements';
+$string['ticker'] = 'Anuncios';
 
 // Slideshow *******************************************************.
 $string['slideshowsettings'] = 'Slideshow';
