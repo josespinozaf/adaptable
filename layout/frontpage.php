@@ -34,12 +34,14 @@ if (!empty($PAGE->theme->settings->sliderenabled)) {
     echo $OUTPUT->get_frontpage_slider();
 }
 
+if (!isloggedin()){
 if (!empty($PAGE->theme->settings->infobox)) {
     if (!empty($PAGE->theme->settings->infoboxfullscreen)) {
         echo '<div id="theinfo">';
     } else {
         echo '<div id="theinfo" class="container">';
     }
+
 ?>
             <div class="row-fluid">
                 <?php echo $OUTPUT->get_setting('infobox', 'format_html'); ?>
@@ -48,10 +50,12 @@ if (!empty($PAGE->theme->settings->infobox)) {
  
 <?php
 }
+}
 ?>
 
 <?php if (!empty($PAGE->theme->settings->frontpagemarketenabled)) {
-    echo $OUTPUT->get_marketing_blocks();
+    if (!isloggedin())
+    	echo $OUTPUT->get_marketing_blocks();
 } ?>
 
 <?php if (!empty($PAGE->theme->settings->frontpageblocksenabled)) { ?>
@@ -65,6 +69,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
 ?>
 
 <?php
+if (isloggedin()){
 if (!empty($PAGE->theme->settings->infobox2)) {
     if (!empty($PAGE->theme->settings->infoboxfullscreen)) {
         echo '<div id="themessage">';
@@ -81,6 +86,7 @@ if (!empty($PAGE->theme->settings->infobox2)) {
 </div>
 <?php
 }
+}
 ?>
 
 <div class="container outercont">
@@ -92,7 +98,7 @@ if (!empty($PAGE->theme->settings->infobox2)) {
     </div>
 
 <?php
-
+if (isloggedin){
 // Left Sidebar.
 if (($left == 1) && $PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
     echo $OUTPUT->blocks('side-post', 'span3 desktop-first-column');
@@ -113,6 +119,7 @@ echo $OUTPUT->main_content();
 if (is_siteadmin())
 	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_bcu_frontpage_blocks"> Editar Pagina Principal</a></p>';
 echo $OUTPUT->course_content_footer();
+}
 ?>
 
 </section>
@@ -120,8 +127,10 @@ echo $OUTPUT->course_content_footer();
 <?php
 
 // Right Sidebar.
+if(isloggedin()) {
 if (($left == 0) && $PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
     echo $OUTPUT->blocks('side-post', 'span3');
+}
 }
 ?>
 

@@ -426,6 +426,58 @@ if ($PAGE->theme->settings->socialorsearch == 'search') { ?>
 }
 ?>
 
+ <?php 
+//   include ("/../../local/wellness/connect.php");
+//   global $USER, $CFG;
+//   $userid= $USER->id;
+//   $usermail= $USER->email;
+  
+//   $result = mysql_query("SELECT * FROM cantasist WHERE DATE(NOW()) between diainicio and diatermino", $db);
+  
+//   if (!$result) {
+//   	die("Error en la peticion SQL: " . mysql_error());
+//   }
+//   while ($row = mysql_fetch_array($result)) {
+//   	$semanaactual = $row['semana'];
+//   	$asistenciasnecesarias = (double) $row['totalasistencias'];
+//   }
+
+// $resulta = mysql_query("SELECT DISTINCT asistencias2.*, fitnessgram.RUT FROM asistencias2 INNER JOIN fitnessgram WHERE asistencias2.rut = fitnessgram.RUT AND fitnessgram.email = '$usermail' AND asistencias2.Periodo='S-SEM. 2012/1'", $db);
+// $asistenciasperiodo = 0;
+// while ($row = mysql_fetch_array($resulta)) {
+// 	if ($row['Asistencia'] == '1'){
+// 		$asistenciasperiodo = $asistenciasperiodo + 1;
+// 	}
+// 	else if ($row['Asistencia'] == '0,5'){
+// 		$asistenciasperiodo = $asistenciasperiodo + 0.5;
+// 	}
+// 	else if ($row['Asistencia'] == '-1'){
+// 		$asistenciasperiodo = $asistenciasperiodo - 1;
+// 	}
+// }
+// $asisttot=$asistenciasperiodo;
+
+
+//   if (isloggedin() && !is_siteadmin()){
+  	
+//   	  echo' <div class="headerlogo">';
+//       $asistenciasuy = $asistenciasnecesarias-2;
+    
+//             if ($asisttot>=$asistenciasnecesarias) {
+//                 echo '<a href="#aldia" id="login_pop"><img border="0" alt="Atrasado" src="http://i.imgur.com/ajtsY07.jpg" width="56.5156px" heigth="56.5156px"></a>';
+//       }
+//       else if ($asisttot>=$asistenciasuy && $asisttot<$asistenciasnecesarias) {
+//       	echo '<a href="#peligro" id="login_pop"><img border="0" alt="Atrasado" src="http://i.imgur.com/wgORoDf.jpg" width="56.5156px" heigth="56.5156px"></a>';
+//       }
+//       else {
+//       	echo '<a href="#atrasado" id="login_pop"><img border="0" alt="Atrasado" src="http://i.imgur.com/wgORoDf.jpg" width="56.5156px" heigth="56.5156px"></a>';
+//       }
+ 
+//   }
+//      ?>
+
+
+
         <div id="course-header">
             <?php echo $OUTPUT->course_header(); ?>
         </div>

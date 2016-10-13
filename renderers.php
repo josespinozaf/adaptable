@@ -13,7 +13,7 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
+// HOLA COTELIN//
 /**
  * Version details
  *
@@ -1322,6 +1322,7 @@ EOT;
         $custommenuitems = '';
         $access = true;
         $retval = '';
+        
 
         if (!isset($PAGE->theme->settings->toolsmenuscount)) {
             return '';

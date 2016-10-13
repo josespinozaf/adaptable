@@ -1421,6 +1421,7 @@ div.questionbankwindow.block {
     -moz-transition: width .5s ease-in-out;
     -o-transition: width .5s ease-in-out;
     transition: width .5s ease-in-out;
+    right-margin: 500px;
 }
 
 #block-region-side-post {
