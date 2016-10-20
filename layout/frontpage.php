@@ -54,7 +54,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
 ?>
 
 <?php if (!empty($PAGE->theme->settings->frontpagemarketenabled)) {
-    if (!isloggedin())
+    if (isloggedin())
     	echo $OUTPUT->get_marketing_blocks();
 } ?>
 
@@ -136,20 +136,20 @@ if (($left == 0) && $PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
 
 </div>
 
-<?php
-if (is_siteadmin()) {
-?>
-      <div class="hidden-blocks">
-        <div class="row-fluid">
-          <h4><?php echo get_string('frnt-footer', 'theme_adaptable') ?></h4>
+ <?php
+// if (is_siteadmin()) {
+// ?>
+<!--       <div class="hidden-blocks"> -->
+<!--         <div class="row-fluid"> -->
+          <h4><?php //echo get_string('frnt-footer', 'theme_adaptable') ?></h4>
           <?php
-            echo $OUTPUT->blocks('frnt-footer', 'span10');
-          ?>
-        </div>
-      </div>
+//             //echo $OUTPUT->blocks('frnt-footer', 'span10');
+//           ?>
+<!--         </div> -->
+<!--       </div> -->
     <?php
-}
-?>
+// }
+// ?>
 </div>
 
 <?php
