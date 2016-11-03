@@ -117,8 +117,12 @@ if ($PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
 
 echo $OUTPUT->course_content_header();
 echo $OUTPUT->main_content();
-if (is_siteadmin())
-	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_bcu_frontpage_blocks"> Editar Pagina Principal</a></p>';
+if (is_siteadmin()){
+	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_blocks"> Editar Bloques de Pagina Principal</a></p>';
+	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_slider"> Editar Carrusel de Diapositivas</a></p>';
+	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_ticker"> Editar Noticias</a></p>';
+	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_alert"> Editar Alertas</a></p>';
+}
 echo $OUTPUT->course_content_footer();
 }
 ?>
