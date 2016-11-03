@@ -67,9 +67,9 @@ html[xmlns] .slides {display: block;}
 /* Caption style */
 /* IE rgba() hack */
 .flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
-.flex-caption { bottom: 0px; background-color: rgba(0, 0, 0, 0.5); color: #fff; margin: 0; padding: 25px 25px 25px 30px; position: absolute; right: 0; width: 50%;}
-.flex-caption h3 {color: [[setting:sliderh3color]]; letter-spacing: 1px; margin-top: 70%; text-transform: uppercase; font-size: 1.5em;}
-.flex-caption h4 {color: [[setting:sliderh4color]]; letter-spacing: 1px; margin-bottom: 20px; font-size: 1em;}
+.flex-caption { top: 0px; background-color: rgba(0, 0, 0, 0.5); color: #fff; margin: 0; padding: 5px 25px 25px 30px; position: absolute; right: 0; width: 50%;}
+.flex-caption h3 {color: [[setting:sliderh3color]]; letter-spacing: 1px; margin-top: 5%; text-transform: uppercase; font-size: 1.5em;}
+.flex-caption h4 {color: [[setting:sliderh4color]]; letter-spacing: 1px; margin-top: 0px; font-size: 1em;}
 .flex-caption p {margin: 0 0 15px;}
 .flex-caption .submit {margin-right: 10px; float:right; color: [[setting:slidersubmitcolor]] !important; background: [[setting:slidersubmitbgcolor]]}
 
