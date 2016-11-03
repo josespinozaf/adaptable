@@ -682,11 +682,9 @@ EOT;
     public function get_news_ticker() {
         global $PAGE;
         $retval = '';
-
         if (!isset($PAGE->theme->settings->enabletickermy)) {
             $PAGE->theme->settings->enabletickermy = 0;
         }
-
         if ((!empty($PAGE->theme->settings->enableticker) &&
         $PAGE->theme->settings->enableticker &&
         $PAGE->bodyid == "page-site-index") ||

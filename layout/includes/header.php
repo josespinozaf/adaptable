@@ -564,4 +564,6 @@ if (isloggedin()) {
 </header>
 
 <?php
+if (isloggedin()){
     echo $OUTPUT->get_news_ticker();
+}
