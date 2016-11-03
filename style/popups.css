@@ -1,7 +1,3 @@
-/* Custom CSS Settings
--------------------------*/
-[[setting:customcss]]
-
 .main {
     background: #aaa url(../images/bg.jpg) no-repeat;
     width: 800px;
@@ -144,17 +140,4 @@ a#login_pop:hover, a#join_pop:hover {
 }
 .popup input[type="text"]:hover, .popup input[type="password"]:hover {
     border-color: #555 #888 #888;
-}
-
-
-.headerlogo {
-	float: right;
-	margin-bottom: 45px;
-    margin-top: 20px;
-
-
-	
-}
-
-	
 }
