@@ -2,12 +2,7 @@
 -------------------------*/
 [[setting:customcss]]
 
-.main {
-    background: #aaa url(../images/bg.jpg) no-repeat;
-    width: 800px;
-    height: 600px;
-    margin: 50px auto;
-}
+
 .panel {
     background-color: #444;
     height: 34px;
