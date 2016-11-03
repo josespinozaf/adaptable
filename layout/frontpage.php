@@ -30,10 +30,11 @@ $left = theme_adaptable_get_block_side();
 
 $hasfootnote = (!empty($PAGE->theme->settings->footnote));
 
+if(!isloggedin()){
 if (!empty($PAGE->theme->settings->sliderenabled)) {
     echo $OUTPUT->get_frontpage_slider();
 }
-
+}
 if (!isloggedin()){
 if (!empty($PAGE->theme->settings->infobox)) {
     if (!empty($PAGE->theme->settings->infoboxfullscreen)) {
