@@ -1122,7 +1122,7 @@ EOT;
             if (!empty($PAGE->theme->settings->enableevents)) {
                 $branchtitle = get_string('events', 'theme_adaptable');
                 $branchlabel = '<i class="fa fa-calendar"></i> '.$branchtitle;
-                $branchurl   = new moodle_url('/calendar/view.php');
+                $branchurl   = new moodle_url('/calendar/view.php?view=month');
                 $branchsort  = 10000;
                 $branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
