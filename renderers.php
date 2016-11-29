@@ -1126,6 +1126,13 @@ EOT;
                 $branchsort  = 10000;
                 $branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
+            if (!empty($PAGE->theme->settings->enableevents)) {
+            	$branchtitle = 'Contacto';
+            	$branchlabel = '<i class="fa fa-commenting-o"></i> '.$branchtitle;
+            	$branchurl   = new moodle_url('//local/wellness/contacto.php');
+            	$branchsort  = 10001;
+            	$branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
+            }
 
             if (!empty($PAGE->theme->settings->mysitessortoverride) && $PAGE->theme->settings->mysitessortoverride != 'off'
                 && !empty($PAGE->theme->settings->mysitessortoverridefield)) {
