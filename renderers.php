@@ -1099,7 +1099,8 @@ EOT;
                 $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
                 $branch->add('<i class="fa fa-futbol-o"></i>'.format_string('Clases'), new moodle_url('/local/wellness/clases.php'),format_string('Clases'));
                 $branch->add('<i class="fa fa-heartbeat"></i>'.format_string('Sala de Pesas'), new moodle_url('/local/wellness/salapesas.php'),format_string('Sala de Pesas'));
-            }
+                $branch->add('<i class="fa fa-random"></i>'.format_string('Rutina Aleatoria'), new moodle_url('/local/wellness/rutina_aleatoria.php'),format_string('Rutina Aleatoria'));
+        }
             
             if (!empty($PAGE->theme->settings->enableevents)) {
             	//$branchtitle = get_string('mysites', 'theme_bcu');
@@ -1109,31 +1110,22 @@ EOT;
             	$branchsort  = 9997;
             	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
             }
-            
-            if (!empty($PAGE->theme->settings->enableevents)) {
-            	//$branchtitle = get_string('events', 'theme_bcu');
-            	$branchtitle = "Asistencias";
-            	$branchlabel = '<i class="fa fa-check"></i>'.$branchtitle;
-            	$branchurl   = new moodle_url('/local/wellness/asistencias.php');
-            	$branchsort  = 9998;
-            	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
-            }
 
             if (!empty($PAGE->theme->settings->enableevents)) {
                 $branchtitle = get_string('events', 'theme_adaptable');
                 $branchlabel = '<i class="fa fa-calendar"></i> '.$branchtitle;
                 $branchurl   = new moodle_url('/calendar/view.php?view=month');
-                $branchsort  = 10000;
+                $branchsort  = 9998;
                 $branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
             if (!empty($PAGE->theme->settings->enableevents)) {
             	$branchtitle = 'Contacto';
             	$branchlabel = '<i class="fa fa-commenting-o"></i> '.$branchtitle;
             	$branchurl   = new moodle_url('//local/wellness/contacto.php');
-            	$branchsort  = 10001;
+            	$branchsort  = 9999;
             	$branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
-
+            
             if (!empty($PAGE->theme->settings->mysitessortoverride) && $PAGE->theme->settings->mysitessortoverride != 'off'
                 && !empty($PAGE->theme->settings->mysitessortoverridefield)) {
 
