@@ -55,16 +55,18 @@ if (!empty($PAGE->theme->settings->infobox)) {
 ?>
 
 <style>
-.container {
+.container1 {
     position: relative;
     width: 50%;
+    border-radius: 15px;
+	padding: 0px 15px 0px 15px;
 }
 
 .image {
   opacity: 1;
   display: block;
-  width: 100%;
-  height: auto;
+  width: 150px;
+  height: 150px;
   transition: .5s ease;
   backface-visibility: hidden;
   border-radius: 15px;
@@ -73,29 +75,30 @@ if (!empty($PAGE->theme->settings->infobox)) {
 .middle {
   transition: .5s ease;
   opacity: 0;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
 }
 
-.container:hover .image {
+.container1:hover .image {
   opacity: 0.3;
 }
 
-.container:hover .middle {
+.container1:hover .middle {
   opacity: 1;
 }
 
 .text {
   background-color: #851924;
   color: white;
-  font-size: 45px;
+  font-size: 30px;
   padding: 20px 40px;
+  border-radius: 15px;
 }
 </style>
-<div class="container">
+<div class="container1">
   <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" alt="Avatar" class="image" style="width:100%">
   <div class="middle">
     <div class="text">Revisa acá tu FITNESSGRAM </div>
