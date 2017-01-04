@@ -56,10 +56,13 @@ if (!empty($PAGE->theme->settings->infobox)) {
 
 <style>
 .container1 {
-    position: relative;
-    width: 50%;
-    border-radius: 15px;
-	padding: 0px 15px 0px 15px;
+/*     position: inline; */
+/*     width: 40%; */
+    border-radius: 15px; 
+  	padding: 0px 15px 0px 15px; 
+	margin: 5px;
+    float: left;
+    width: 45%;
 }
 
 .image {
@@ -67,6 +70,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
   display: block;
   width: 150px;
   height: 150px;
+  margin: 5px;	
   transition: .5s ease;
   backface-visibility: hidden;
   border-radius: 15px;
@@ -75,8 +79,9 @@ if (!empty($PAGE->theme->settings->infobox)) {
 .middle {
   transition: .5s ease;
   opacity: 0;
+  float: left;
   position: relative;
-  top: 50%;
+  top: -70px;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
@@ -91,20 +96,44 @@ if (!empty($PAGE->theme->settings->infobox)) {
 }
 
 .text {
-  background-color: #851924;
-  color: white;
-  font-size: 30px;
-  padding: 20px 40px;
+  color: #851924;
+  font-family:  Arial;
+  font-size: 45px;
   border-radius: 15px;
 }
 </style>
 <div class="container1">
-  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" alt="Avatar" class="image" style="width:100%">
+<a href="local/wellness/fitnessgram.php">
+  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" class="image" style="width:100%">
   <div class="middle">
-    <div class="text">Revisa acá tu FITNESSGRAM </div>
+    <div class="text">Revisa TU FITNESSGRAM </div>
   </div>
+  </a>
 </div>
-
+<div class="container1">
+<a href="local/wellness/clases.php">
+<img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">CLASES </div>
+  </div>
+  </a>
+</div>
+<div class="container1">
+  <a href="local/wellness/saladepesas.php">
+  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">RUTINAS </div>
+  </div>
+  </a>
+</div>
+<div class="container1">
+<a href="/moodle/calendar/view.php?view=month">
+  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">EVENTOS </div>
+  </div>
+  </a>
+</div>
 <?php if (!empty($PAGE->theme->settings->frontpagemarketenabled)) {
     if (isloggedin())
     	echo $OUTPUT->get_marketing_blocks();
