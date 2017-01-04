@@ -1052,7 +1052,7 @@ Moodle.com|http://moodle.com/
 
 $string['toolsmenulabel'] = 'Tools';
 $string['toolsmenulabel2'] = 'Tools 2';
-$string['events'] = 'Events';
+$string['events'] = 'Eventos';
 $string['mysites'] = 'My Courses';
 $string['hiddencourses'] = 'Hidden Courses';
 $string['pastcourses'] = 'Past Courses';

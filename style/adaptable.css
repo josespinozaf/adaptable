@@ -1705,3 +1705,21 @@ line-height: normal;
 #page-mod-glossary-view .glossarycontrol {
     margin: -40px 5px;
 }
+
+/*Tabla de rutinas*/
+
+tablerutina {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tdrutina, thrutina {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+trrutina:nth-child(even) {
+    background-color: #dddddd;
+}
