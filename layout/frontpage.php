@@ -112,7 +112,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
 </div>
 <div class="container1">
 <a href="local/wellness/clases.php">
-<img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" class="image" style="width:100%">
+<img src="http://www.uai.cl/images/sitio/alumnos_pregrado/deportes/Cross-Trainning.jpg" class="image" style="width:100%">
   <div class="middle">
     <div class="text">CLASES </div>
   </div>
@@ -120,7 +120,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
 </div>
 <div class="container1">
   <a href="local/wellness/saladepesas.php">
-  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" class="image" style="width:100%">
+  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/deportes/20161022_141257.jpg" class="image" style="width:100%">
   <div class="middle">
     <div class="text">RUTINAS </div>
   </div>
@@ -128,7 +128,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
 </div>
 <div class="container1">
 <a href="/moodle/calendar/view.php?view=month">
-  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" class="image" style="width:100%">
+  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/corrida-vina-del-mar-2015.jpg" class="image" style="width:100%">
   <div class="middle">
     <div class="text">EVENTOS </div>
   </div>
