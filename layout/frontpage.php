@@ -105,34 +105,34 @@ if(isloggedin()){
 }
 </style>
 <div class="container1">
-<a href="local/wellness/fitnessgram.php">
-  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/infraestructura.jpg" class="image" style="width:100%">
+<a href="local/wellness/imc.php">
+  <img src="local/wellness/pix/frontpage/infraestructura.jpg" class="image" style="width:100%">
   <div class="middle">
-    <div class="text">Revisa TU FITNESSGRAM </div>
+    <div class="text">Revisa TU IMC </div>
   </div>
   </a>
 </div>
 <div class="container1">
 <a href="local/wellness/clases.php">
-<img src="http://www.uai.cl/images/sitio/alumnos_pregrado/deportes/Cross-Trainning.jpg" class="image" style="width:100%">
+<img src="local/wellness/pix/frontpage/Cross-Trainning.jpg" class="image" style="width:100%">
   <div class="middle">
-    <div class="text">CLASES </div>
+    <div class="text">Revisa las CLASES </div>
   </div>
   </a>
 </div>
 <div class="container1">
   <a href="local/wellness/saladepesas.php">
-  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/deportes/20161022_141257.jpg" class="image" style="width:100%">
+  <img src="local/wellness/pix/frontpage/gym.jpg" class="image" style="width:100%">
   <div class="middle">
-    <div class="text">RUTINAS </div>
+    <div class="text">Revisa las RUTINAS</div>
   </div>
   </a>
 </div>
 <div class="container1">
 <a href="/moodle/calendar/view.php?view=month">
-  <img src="http://www.uai.cl/images/sitio/alumnos_pregrado/corrida-vina-del-mar-2015.jpg" class="image" style="width:100%">
+  <img src="local/wellness/pix/frontpage/corrida.jpg" class="image" style="width:100%">
   <div class="middle">
-    <div class="text">EVENTOS </div>
+    <div class="text">Concepto Wellness </div>
   </div>
   </a>
 </div>
