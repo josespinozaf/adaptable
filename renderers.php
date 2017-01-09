@@ -1104,9 +1104,9 @@ EOT;
             
             if (!empty($PAGE->theme->settings->enableevents)) {
             	//$branchtitle = get_string('mysites', 'theme_bcu');
-            	$branchtitle = "Fitnessgram";
+            	$branchtitle = "IMC";
             	$branchlabel = '<i class="fa fa-line-chart"></i>'.$branchtitle;
-            	$branchurl   = new moodle_url('/local/wellness/fitnessgram.php');
+            	$branchurl   = new moodle_url('/local/wellness/imc.php');
             	$branchsort  = 9997;
             	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
             }
