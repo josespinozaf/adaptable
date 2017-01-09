@@ -1110,19 +1110,37 @@ EOT;
             	$branchsort  = 9997;
             	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
             }
+            //para conectarse y recuperar curso wellness
+            include ("/local/wellness/connect.php");
+            $result = mysql_query("SELECT mc.id FROM mdl_course as mc
+		WHERE mc.fullname = 'Wellness'
+		", $db);
+            while ($wellness =  mysql_fetch_array($result))
+            {
+            	$idd = $wellness['id'];
+            }
+            
+            if (!empty($PAGE->theme->settings->enableevents)) {
+            	$branchtitle = 'Wellness!';
+            	$branchlabel = '<i class="fa fa-heartbeat"></i> '.$branchtitle;
+            	$branchurl   = new moodle_url("/course/view.php?id=".$idd."");
+            	$branchsort  = 9998;
+            	$branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
+            }
 
             if (!empty($PAGE->theme->settings->enableevents)) {
                 $branchtitle = get_string('events', 'theme_adaptable');
                 $branchlabel = '<i class="fa fa-calendar"></i> '.$branchtitle;
                 $branchurl   = new moodle_url('/calendar/view.php?view=month');
-                $branchsort  = 9998;
+                $branchsort  = 9999;
                 $branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
+          
             if (!empty($PAGE->theme->settings->enableevents)) {
             	$branchtitle = 'Contacto';
             	$branchlabel = '<i class="fa fa-commenting-o"></i> '.$branchtitle;
-            	$branchurl   = new moodle_url('//local/wellness/contacto.php');
-            	$branchsort  = 9999;
+            	$branchurl   = new moodle_url('/local/wellness/contacto.php');
+            	$branchsort  = 10000;
             	$branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
             
