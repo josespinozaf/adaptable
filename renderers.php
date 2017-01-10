@@ -1086,19 +1086,25 @@ EOT;
                 } else {
                     $branchurl   = new moodle_url('/');
                 }
-                $branchsort  = 9995;
+                $branchsort  = 9994;
                 $branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
+            }
+            
+            if (!empty($PAGE->theme->settings->enablemyhome)) {
+            	$branchsort  = 9995;
+            	$branch = $menu->add('<i class="fa fa-university"></i>'.format_string('Nuestro Equipo'), new moodle_url(''), format_string('Nuestro Equipo'), $branchsort);
+            	$branch->add('<i class="fa fa-graduation-cap"></i>'.format_string('Departamento'), new moodle_url('/local/wellness/departamento.php'),format_string('Departamento'));
+            	$branch->add('<i class="fa fa-users"></i>'.format_string('Selecciones UAI'), new moodle_url('/local/wellness/selecciones.php'),format_string('Selecciones UAI'));
             }
 
         if (!empty($PAGE->theme->settings->enablemyhome)) {
-                //$branchtitle = get_string('myhome');
             	$branchtitle = "Clases y Rutinas";
                 $branchlabel = '<i class="fa fa-trophy"></i>'.$branchtitle;
                 $branchurl   = new moodle_url('');
                 $branchsort  = 9996;
                 $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
                 $branch->add('<i class="fa fa-futbol-o"></i>'.format_string('Clases'), new moodle_url('/local/wellness/clases.php'),format_string('Clases'));
-                $branch->add('<i class="fa fa-heartbeat"></i>'.format_string('Sala de Pesas'), new moodle_url('/local/wellness/salapesas.php'),format_string('Sala de Pesas'));
+                $branch->add('<i class="fa fa-bolt"></i>'.format_string('Sala de Pesas'), new moodle_url('/local/wellness/salapesas.php'),format_string('Sala de Pesas'));
                 $branch->add('<i class="fa fa-random"></i>'.format_string('Rutina Aleatoria'), new moodle_url('/local/wellness/rutina_aleatoria.php'),format_string('Rutina Aleatoria'));
         }
             

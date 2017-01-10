@@ -53,7 +53,9 @@ if (!empty($PAGE->theme->settings->infobox)) {
 }
 }
 ?>
-
+<?php 
+if(isloggedin()){
+	?>
 <style>
 .container1 {
 /*     position: inline; */
@@ -134,6 +136,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
   </div>
   </a>
 </div>
+<?php }?>
 <?php if (!empty($PAGE->theme->settings->frontpagemarketenabled)) {
     if (isloggedin())
     	echo $OUTPUT->get_marketing_blocks();
