@@ -1108,13 +1108,15 @@ EOT;
                 $branch->add('<i class="fa fa-random"></i>'.format_string('Rutina Aleatoria'), new moodle_url('/local/wellness/rutina_aleatoria.php'),format_string('Rutina Aleatoria'));
         }
             
-            if (!empty($PAGE->theme->settings->enableevents)) {
+            if (!empty($PAGE->theme->settings->enablemyhome)) {
             	//$branchtitle = get_string('mysites', 'theme_bcu');
             	$branchtitle = "IMC";
             	$branchlabel = '<i class="fa fa-line-chart"></i>'.$branchtitle;
-            	$branchurl   = new moodle_url('/local/wellness/imc.php');
+            	$branchurl   = new moodle_url('');
             	$branchsort  = 9997;
             	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
+            	$branch->add('<i class="fa fa-medkit"></i>'.format_string('IMC UAI'), new moodle_url('/local/wellness/imc.php'),format_string('IMC UAI'));
+            	$branch->add('<i class="fa fa-hand-rock-o"></i>'.format_string('Mi IMC'), new moodle_url('/local/wellness/miimc.php'),format_string('Mi IMC'));
             }
             //para conectarse y recuperar curso wellness
             include ("/local/wellness/connect.php");
@@ -1126,7 +1128,7 @@ EOT;
             	$idd = $wellness['id'];
             }
             
-            if (!empty($PAGE->theme->settings->enableevents)) {
+            if (!empty($PAGE->theme->settings->enablemyhome)) {
             	$branchtitle = 'Wellness!';
             	$branchlabel = '<i class="fa fa-heartbeat"></i> '.$branchtitle;
             	$branchurl   = new moodle_url("/course/view.php?id=".$idd."");

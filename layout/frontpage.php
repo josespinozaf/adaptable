@@ -136,11 +136,21 @@ if(isloggedin()){
   </div>
   </a>
 </div>
-<?php }?>
+<div class="container1" style="display: inline">
+<?php }
+if (is_siteadmin()){
+	echo '<br><br><p align="left"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_blocks"> Editar Imagen Evento y Videos</a></p>';
+}
+?>
+</div>
 <?php if (!empty($PAGE->theme->settings->frontpagemarketenabled)) {
     if (isloggedin())
     	echo $OUTPUT->get_marketing_blocks();
-} ?>
+} 
+
+
+
+?>
 
 <?php if (!empty($PAGE->theme->settings->frontpageblocksenabled)) { ?>
     <div id="frontblockregion" class="container">
@@ -187,7 +197,6 @@ if (($left == 1) && $PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
     echo $OUTPUT->blocks('side-post', 'span3 desktop-first-column');
 }
 
-
 // Main Region.
 if ($PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
     if ($left == 1) {
@@ -198,9 +207,9 @@ if ($PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
 }
 
 echo $OUTPUT->course_content_header();
+
 echo $OUTPUT->main_content();
 if (is_siteadmin()){
-	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_blocks"> Editar Bloques de Pagina Principal</a></p>';
 	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_slider"> Editar Carrusel de Diapositivas</a></p>';
 	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_ticker"> Editar Noticias</a></p>';
 	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_alert"> Editar Alertas</a></p>';
