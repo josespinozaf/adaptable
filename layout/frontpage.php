@@ -54,6 +54,9 @@ if (!empty($PAGE->theme->settings->infobox)) {
 }
 ?>
 <?php 
+if (is_siteadmin()){
+echo '<p align="left"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_ticker"> Editar Noticias</a></p>';
+}
 if(isloggedin()){
 	?>
 <style>
@@ -174,7 +177,7 @@ if (!empty($PAGE->theme->settings->infobox2)) {
 
     <div id="themessage-internal">
         <div class="row-fluid">
-<?php echo $OUTPUT->get_setting('infobox2', 'format_html');; ?>
+<?php echo $OUTPUT->get_setting('infobox2', 'format_html'); ?>
         </div>
     </div>
 </div>
@@ -211,7 +214,6 @@ echo $OUTPUT->course_content_header();
 echo $OUTPUT->main_content();
 if (is_siteadmin()){
 	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_slider"> Editar Carrusel de Diapositivas</a></p>';
-	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_ticker"> Editar Noticias</a></p>';
 	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_alert"> Editar Alertas</a></p>';
 }
 echo $OUTPUT->course_content_footer();
