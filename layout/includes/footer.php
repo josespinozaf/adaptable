@@ -48,7 +48,7 @@ if ($PAGE->theme->settings->showfooterblocks) { ?>
     if ($PAGE->theme->settings->moodledocs) {
 ?>
                 <div class="span4 helplink">
-<?php echo $OUTPUT->page_doc_link(); ?>
+<?php echo "Departamento Deportes - UAI - ".date('Y') ?>
                 </div>
 <?php
     }
