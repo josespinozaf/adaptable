@@ -55,7 +55,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
 ?>
 <?php 
 if (is_siteadmin()){
-echo '<p align="left"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_ticker"> Editar Noticias</a></p>';
+echo '<p align="left"><i class="fa fa-pencil-square-o"></i><a href="admin/settings.php?section=theme_adaptable_frontpage_ticker"> Editar Noticias</a></p>';
 }
 if(isloggedin()){
 	?>
@@ -142,7 +142,7 @@ if(isloggedin()){
 <div class="container1" style="display: inline">
 <?php }
 if (is_siteadmin()){
-	echo '<br><br><p align="left"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_blocks"> Editar Imagen Evento y Videos</a></p>';
+	echo '<br><br><p align="left"><i class="fa fa-pencil-square-o"></i><a href="admin/settings.php?section=theme_adaptable_frontpage_blocks"> Editar Imagen Evento y Videos</a></p>';
 }
 ?>
 </div>
@@ -209,13 +209,15 @@ if ($PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
     }
 }
 
+if (is_siteadmin()){
+	echo '<p align="left"><i class="fa fa-pencil-square-o"></i><a href="admin/settings.php?section=theme_adaptable_frontpage_slider"> Editar Carrusel de Diapositivas</a></p>';
+	echo '<p align="left"><i class="fa fa-pencil-square-o"></i><a href="admin/settings.php?section=theme_adaptable_frontpage_alert"> Editar Alertas</a></p>';
+}
+
 echo $OUTPUT->course_content_header();
 
 echo $OUTPUT->main_content();
-if (is_siteadmin()){
-	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_slider"> Editar Carrusel de Diapositivas</a></p>';
-	echo '<p align="right"><i class="fa fa-pencil-square-o"></i><a href="../moodle/admin/settings.php?section=theme_adaptable_frontpage_alert"> Editar Alertas</a></p>';
-}
+
 echo $OUTPUT->course_content_footer();
 }
 ?>
