@@ -1112,11 +1112,10 @@ EOT;
             	//$branchtitle = get_string('mysites', 'theme_bcu');
             	$branchtitle = "IMC";
             	$branchlabel = '<i class="fa fa-line-chart"></i>'.$branchtitle;
-            	$branchurl   = new moodle_url('');
+            	$branchurl   = new moodle_url('/local/wellness/imc.php');
             	$branchsort  = 9997;
             	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
-            	$branch->add('<i class="fa fa-medkit"></i>'.format_string('IMC UAI'), new moodle_url('/local/wellness/imc.php'),format_string('IMC UAI'));
-            	$branch->add('<i class="fa fa-hand-rock-o"></i>'.format_string('Mi IMC'), new moodle_url('/local/wellness/miimc.php'),format_string('Mi IMC'));
+            	
             }
             //para conectarse y recuperar curso wellness
             include ("/local/wellness/connect.php");
