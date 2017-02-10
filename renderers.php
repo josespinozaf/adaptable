@@ -1117,20 +1117,12 @@ EOT;
             	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
             	
             }
-            //para conectarse y recuperar curso wellness
-            include ("/local/wellness/connect.php");
-            $result = mysql_query("SELECT mc.id FROM mdl_course as mc
-		WHERE mc.fullname = 'Wellness'
-		", $db);
-            while ($wellness =  mysql_fetch_array($result))
-            {
-            	$idd = $wellness['id'];
-            }
-            
+
             if (!empty($PAGE->theme->settings->enablemyhome)) {
             	$branchtitle = 'Wellness!';
             	$branchlabel = '<i class="fa fa-heartbeat"></i> '.$branchtitle;
-            	$branchurl   = new moodle_url("/course/view.php?id=".$idd."");
+            	//OJO QUE EL NUMERO DE CLASE WELLNESS PUEDE CAMBIAR.. RECUPERARLO
+            	$branchurl   = new moodle_url("/course/view.php?id=14");
             	$branchsort  = 9998;
             	$branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
