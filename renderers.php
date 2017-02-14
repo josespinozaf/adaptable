@@ -1122,7 +1122,7 @@ EOT;
             	$branchtitle = 'Wellness!';
             	$branchlabel = '<i class="fa fa-heartbeat"></i> '.$branchtitle;
             	//OJO QUE EL NUMERO DE CLASE WELLNESS PUEDE CAMBIAR.. RECUPERARLO
-            	$branchurl   = new moodle_url("/course/view.php?id=14");
+            	$branchurl   = new moodle_url("/course/view.php?id=3");
             	$branchsort  = 9998;
             	$branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }

@@ -253,4 +253,6 @@ if (($left == 0) && $PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
 </div>
 
 <?php
+if (isloggedin()){
 require_once(dirname(__FILE__) . '/includes/footer.php');
+}
