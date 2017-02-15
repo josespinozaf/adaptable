@@ -47,8 +47,7 @@ if (!empty($PAGE->theme->settings->infobox)) {
             <div class="row-fluid">
                 <?php echo $OUTPUT->get_setting('infobox', 'format_html'); ?>
             </div>
-        </div>
- 
+        
 <?php
 }
 }
@@ -180,7 +179,7 @@ if (!empty($PAGE->theme->settings->infobox2)) {
 <?php echo $OUTPUT->get_setting('infobox2', 'format_html'); ?>
         </div>
     </div>
-</div>
+
 <?php
 }
 }
@@ -194,12 +193,12 @@ if (!empty($PAGE->theme->settings->infobox2)) {
     </div>
 
 <?php
-if (isloggedin){
+if (isloggedin()){
 // Left Sidebar.
 if (($left == 1) && $PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
     echo $OUTPUT->blocks('side-post', 'span3 desktop-first-column');
 }
-
+}
 // Main Region.
 if ($PAGE->blocks->region_has_content('side-post', $OUTPUT)) {
     if ($left == 1) {
@@ -219,12 +218,6 @@ echo $OUTPUT->course_content_header();
 echo $OUTPUT->main_content();
 
 echo $OUTPUT->course_content_footer();
-}
-?>
-
-</section>
-
-<?php
 
 // Right Sidebar.
 if(isloggedin()) {
