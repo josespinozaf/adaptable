@@ -1117,13 +1117,23 @@ EOT;
             	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
             	
             }
+            
+            if (!empty($PAGE->theme->settings->enablemyhome)) {
+            	//$branchtitle = get_string('mysites', 'theme_bcu');
+            	$branchtitle = "Mis Asistencias";
+            	$branchlabel = '<i class="fa fa-book"></i>'.$branchtitle;
+            	$branchurl   = new moodle_url('/local/wellness/misasistencias.php');
+            	$branchsort  = 9997;
+            	$branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
+            	 
+            }
 
             if (!empty($PAGE->theme->settings->enablemyhome)) {
             	$branchtitle = 'Wellness!';
             	$branchlabel = '<i class="fa fa-heartbeat"></i> '.$branchtitle;
             	//OJO QUE EL NUMERO DE CLASE WELLNESS PUEDE CAMBIAR.. RECUPERARLO
             	$branchurl   = new moodle_url("/course/view.php?id=3");
-            	$branchsort  = 9998;
+            	$branchsort  = 9999;
             	$branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
 
@@ -1131,7 +1141,7 @@ EOT;
                 $branchtitle = get_string('events', 'theme_adaptable');
                 $branchlabel = '<i class="fa fa-calendar"></i> '.$branchtitle;
                 $branchurl   = new moodle_url('/calendar/view.php?view=month');
-                $branchsort  = 9999;
+                $branchsort  = 10000;
                 $branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
           
@@ -1139,7 +1149,7 @@ EOT;
             	$branchtitle = 'Contacto';
             	$branchlabel = '<i class="fa fa-commenting-o"></i> '.$branchtitle;
             	$branchurl   = new moodle_url('/local/wellness/contacto.php');
-            	$branchsort  = 10000;
+            	$branchsort  = 10001;
             	$branch = $menu->add($branchlabel, $branchurl, '', $branchsort);
             }
             
